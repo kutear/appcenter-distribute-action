@@ -32,7 +32,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Distribute to AppCenter
-        uses: akinncar/appcenter-action@master
+        uses: akinncar/appcenter-distribute-action@master
         with:
           args: stores publish  --file /path/to/file.aab --store Production --app yourName/sample-app --release-notes "Some note."
         env:
