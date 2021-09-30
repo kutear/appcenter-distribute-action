@@ -1,6 +1,6 @@
 # GitHub Actions for Firebase
 
-This Action for [appcenter codepush](https://github.com/microsoft/appcenter-cli) enables arbitrary actions with the `appcenter` command-line client.
+This Action for [appcenter distribute](https://github.com/microsoft/appcenter-cli) enables arbitrary actions with the `appcenter` command-line client.
 
 ## Inputs
 
@@ -13,7 +13,7 @@ This Action for [appcenter codepush](https://github.com/microsoft/appcenter-cli)
 
 ## Example
 
-To authenticate with Codepush, and deploy to Codepush:
+To authenticate with AppCenter, and deploy to AppCenter:
 
 ```yaml
 name: Build and Deploy
@@ -31,10 +31,10 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
-      - name: Deploy to Codepush
-        uses: NishanthShankar/codepush-action@master
+      - name: Distribute to AppCenter
+        uses: akinncar/appcenter-action@master
         with:
-          args: release-react -d Production
+          args: stores publish  --file /path/to/file.aab --store Production --app yourName/sample-app --release-notes "Some note."
         env:
           APPCENTER_ACCESS_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
 ```
