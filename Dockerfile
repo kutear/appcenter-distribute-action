@@ -5,7 +5,7 @@ LABEL repository="https://github.com/NishanthShankar/codepush-action"
 LABEL homepage="https://github.com/NishanthShankar/codepush-action"
 LABEL maintainer="Nishanth Shankar <nishanthShankr@gmail.com>"
 
-LABEL com.github.actions.name="GitHub Action for Codepush"
+LABEL com.github.actions.name="GitHub Action for Appcenter"
 LABEL com.github.actions.description="Wraps the appcenter CLI to enable common commands."
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="gray-dark"
