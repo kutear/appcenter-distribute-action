@@ -32,7 +32,7 @@ jobs:
       - name: Install Dependencies
         run: npm install npm@latest -g
       - name: Distribute to AppCenter
-        uses: familiohq/appcenter-distribute-action@master
+        uses: grndvl1/appcenter-distribute-action@master
         with:
           args: stores publish --file /path/to/file.apk-or-aab --store Production --app yourName/sample-app
         env:
