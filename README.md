@@ -20,7 +20,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -30,15 +30,14 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
-        run: npm install
+        run: npm install npm@latest -g
       - name: Distribute to AppCenter
-        uses: akinncar/appcenter-distribute-action@master
+        uses: familiohq/appcenter-distribute-action@master
         with:
-          args: stores publish  --file /path/to/file.aab --store Production --app yourName/sample-app --release-notes "Some note."
+          args: stores publish --file /path/to/file.apk-or-aab --store Production --app yourName/sample-app
         env:
-          APPCENTER_ACCESS_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
+          APPCENTER_ACCESS_TOKEN: ${{ secrets.APP_CENTER_TOKEN }}
 ```
-
 
 ## License
 
