@@ -29,8 +29,21 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+        
+      - name: Check file existence
+        id: check_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "*.apk"
+
+      - name: File exists
+        if: steps.check_files.outputs.files_exists == 'true'
+        # Only runs if all of the files exists
+        run: echo All files exists!
+
       - name: Install Dependencies
         run: npm install npm@latest -g
+
       - name: Distribute to AppCenter
         uses: grndvl1/appcenter-distribute-action@master
         with:
