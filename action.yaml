@@ -1,6 +1,6 @@
-name: 'GitHub Action for AppCenter Distribute'
-author: 'Akinn Rosa'
-description: 'Wraps the appcenter CLI to enable common commands.'
+name: 'Appcenter Distribute - Github Actions'
+author: 'John Matthews'
+description: 'Wraps the appcenter CLI to enable common commands.  Forked and fixed with latest npm and a file checker.'
 branding:
   icon: 'package'
   color: 'gray-dark'
