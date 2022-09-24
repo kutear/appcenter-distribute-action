@@ -8,4 +8,4 @@ if [ -z "$APPCENTER_ACCESS_TOKEN" ]; then
 fi
 
 
-sh -c "appcenter distribute $*"
+sh -c "$*"
